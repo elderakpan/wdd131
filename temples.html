@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+
+    <meta name="description" content="Temple Album page showcasing LDS temples using responsive design.">
+    <meta name="author" content="Itoro Etim Akpan">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Mobile First CSS -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Temple Album</h1>
+
+        <button id="menu" aria-label="Toggle Navigation">☰</button>
+
+        <nav>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Featured Temples</h2>
+
+        <section class="gallery">
+            <!-- 9 Figures -->
+            <figure><img src="images/salt-lake-temple.jpg" alt="Temple">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure><img src="images/rome-italy-temple.jpeg" alt="Temple">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+            <figure><img src="images/paris-france-temple.jpg" alt="Temple">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+            <figure><img src="images/accra-ghana-temple.webp" alt="Temple">
+                <figcaption>Accra Ghana Temple</figcaption>
+            </figure>
+            <figure><img src="images/lond-enland-temple.jpg" alt="Temple">
+                <figcaption>London England Temple</figcaption>
+            </figure>
+            <figure><img src="images/tokyo-japan-temple.jpg" alt="Temple">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+            <figure><img src="images/sao-paulo-brazil-temple.jpg" alt="Temple">
+                <figcaption>São Paulo Brazil Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/manila-philippines-temple.webp" alt=" Temple ">
+                <figcaption>Manila Philippines Temple</figcaption>
+            </figure>
+            <figure><img src="images/laie-hawaii-temple.jpg" alt="Temple ">
+                <figcaption>Laie Hawaii Temple</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear "></span> Itoro Etim Akpan | Nigeria
+        </p>
+        <p id="lastModified "></p>
+    </footer>
+
+</body>
+
+</html>
