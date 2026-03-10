@@ -1,0 +1,16 @@
+/* Larger screens (tablet/desktop) */
+
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex !important;
+        /* show menu by default */
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .temple-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    #hamburger {
+        display: none;
+    }
+}
