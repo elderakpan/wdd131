@@ -1,15 +1,19 @@
-/* Mobile-first styles */
+/* Basic Reset */
 
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
     color: #003366;
 }
 
 header {
-    background: #003366;
+    background-color: #003366;
     color: white;
     padding: 1rem;
     display: flex;
@@ -17,56 +21,75 @@ header {
     align-items: center;
 }
 
-nav ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    /* hidden by default for hamburger */
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 0;
-}
-
-nav ul li a:hover {
-    color: #f4f4f4;
-    background-color: #0055a5;
+header h1 {
+    font-size: 1.5rem;
 }
 
 #hamburger {
-    font-size: 1.5rem;
+    font-size: 2rem;
     background: none;
     border: none;
     color: white;
+    cursor: pointer;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+nav.open ul {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    background-color: #0055a5;
+    border-radius: 4px;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 .temple-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 1rem;
 }
 
 figure {
-    margin: 0;
     background: white;
     padding: 0.5rem;
+    border-radius: 5px;
     text-align: center;
 }
 
 figure img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
 }
 
 footer {
     text-align: center;
     padding: 1rem;
-    background: #003366;
+    background-color: #003366;
     color: white;
+    margin-top: 2rem;
 }
