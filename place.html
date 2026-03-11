@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria | WDD131</title>
+    <meta name="description" content="A page describing Nigeria including culture and weather.">
+
+    <!-- Link external CSS -->
+    <link rel="stylesheet" href="styles/place.css">
+
+    <!-- Link external JS -->
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <picture>
+            <source srcset="images/nigeria-large.webp" media="(min-width:1000px)">
+            <source srcset="images/nigeria-medium.webp" media="(min-width:600px)">
+            <img src="images/nigeria-small.webp" alt="Landscape view of Nigeria city skyline" width="600" height="400">
+        </picture>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section class="info">
+            <h2>About Nigeria</h2>
+            <p>
+                Nigeria is the most populous country in Africa. It has rich cultural diversity, beautiful natural landscapes, and vibrant cities like Lagos and Abuja.
+            </p>
+            <ul>
+                <li>Capital: Abuja</li>
+                <li>Population: 200+ million</li>
+                <li>Currency: Naira</li>
+                <li>Official Language: English</li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather ⛅</h2>
+            <p>Temperature: <span id="temp">28</span> °C</p>
+            <p>Wind Speed: <span id="wind">10</span> km/h</p>
+            <p>Wind Chill: <span id="windchill"></span></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© <span id="year"></span> | Itoro Etim Akpan | Nigeria</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>
