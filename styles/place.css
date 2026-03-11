@@ -1,3 +1,13 @@
+:root {
+    --primary-color: #008751;
+    --secondary-color: #222;
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --section-bg: #fff;
+    --max-width: 900px;
+}
+
+
 /* Reset default styles */
 
 * {
@@ -7,20 +17,20 @@
 }
 
 
-/* Body styling */
+/* Body */
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 
 /* Header */
 
 header {
-    background-color: #008751;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1.2rem;
@@ -50,19 +60,16 @@ header {
 }
 
 
-/* Main Content */
+/* Main */
 
 main {
-    max-width: 900px;
+    max-width: var(--max-width);
     margin: auto;
     padding: 1rem;
 }
 
-
-/* Sections */
-
 section {
-    background: white;
+    background: var(--section-bg);
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 8px;
@@ -73,36 +80,36 @@ section:hover {
     transform: scale(1.02);
 }
 
-
-/* Headings */
-
 h2 {
-    color: #008751;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
-    border-bottom: 2px solid #008751;
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
 }
-
-
-/* Lists */
 
 ul {
     padding-left: 1.5rem;
     margin-top: 0.5rem;
 }
 
-
-/* Weather Section */
-
 .weather p {
     margin: 0.3rem 0;
+}
+
+
+/* SVG icon styling */
+
+.weather h2 svg {
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    fill: var(--primary-color);
 }
 
 
 /* Footer */
 
 footer {
-    background-color: #222;
+    background-color: var(--secondary-color);
     color: white;
     text-align: center;
     padding: 1rem;
@@ -112,4 +119,39 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    header {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    main {
+        padding: 0.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 999px) {
+    header {
+        font-size: 1.7rem;
+        padding: 1rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
+        padding: 2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
 }
