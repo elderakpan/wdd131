@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>WDD 131 – Dynamic Web Fundamentals – Itoro Etim Akpan</title>
-
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Itoro Etim Akpan | Home page about web development and learning progress.">
-
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Itoro Etim Akpan | Portfolio page showcasing projects and learning progress.">
     <meta name="author" content="Itoro Etim Akpan">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="styles/base.css">
+
+    <!-- JS for dates -->
     <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-
+    <!-- Header -->
     <header>
         <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
-
         <nav>
             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
             <a href="https://byupw.instructure.com/">Canvas</a>
@@ -28,35 +32,72 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Itoro Etim Akpan</h1>
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hello, I’m Itoro Etim Akpan</h1>
+            <p>Learning Web Development | HTML | CSS | JavaScript | Portfolio Showcase</p>
+        </div>
+    </section>
 
+    <!-- Main Content -->
+    <main>
+        <!-- About Me Card -->
         <section class="card">
             <h2>About Me</h2>
             <img src="images/my-profile.jpg" alt="My profile picture">
             <p>
-                My name is Itoro Etim Akpan. I am from Nigeria and I am currently learning web development. I enjoy building websites and improving my coding skills in HTML, CSS, and JavaScript.
+                I am a passionate web developer from Nigeria, focused on building responsive and interactive web applications. Currently learning HTML, CSS, and JavaScript through BYU-Idaho WDD 131.
             </p>
         </section>
 
+        <!-- Projects / Country Card -->
         <section class="card">
-            <h2>My Country</h2>
-            <img src="images/nigeria-flag.webp" alt="Nigeria view">
+            <h2>My Country & Projects</h2>
+            <img src="images/nigeria-flag.webp" alt="Nigeria flag">
             <p>
-                Nigeria is a country in West Africa known for its rich culture, diverse population, and vibrant cities like Lagos and Abuja.
+                Nigeria is a vibrant country in West Africa with diverse cultures and cities. Here are some of my web development projects:
             </p>
+            <ul>
+                <li><a href="#">WDD131 Home Page Project</a></li>
+                <li><a href="#">Weather Dashboard (JavaScript)</a></li>
+                <li><a href="#">Responsive Portfolio Site</a></li>
+            </ul>
         </section>
 
+        <!-- New Projects Section -->
+        <section class="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/project1.webp" alt="Project 1 screenshot">
+                    <h3>Portfolio Website</h3>
+                    <p>A fully responsive portfolio website built using HTML, CSS, and JavaScript.</p>
+                    <a href="#">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/project2.webp" alt="Project 2 screenshot">
+                    <h3>Weather Dashboard</h3>
+                    <p>An interactive dashboard fetching live weather data from an API.</p>
+                    <a href="#">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/project3.webp" alt="Project 3 screenshot">
+                    <h3>Task Manager App</h3>
+                    <p>A JavaScript app to manage tasks with local storage integration.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>
-            © <span id="currentyear"></span> | Itoro Etim Akpan | Nigeria
-        </p>
-
+        <p>© <span id="currentyear"></span> | Itoro Etim Akpan | Nigeria</p>
         <p id="lastModified"></p>
     </footer>
-
 </body>
 
 </html>
