@@ -1,7 +1,4 @@
-/* Google Fonts applied in HTML head */
-
-
-/* Reset some default margins/paddings */
+/* Reset */
 
 * {
     margin: 0;
@@ -10,14 +7,12 @@
 }
 
 
-/* Body styles */
+/* Body */
 
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
-    /* standard hex for white */
     color: #004080;
-    /* standard hex for deep blue text */
     line-height: 1.6;
 }
 
@@ -26,9 +21,7 @@ body {
 
 header {
     background-color: #004080;
-    /* deep blue */
     color: #ffffff;
-    /* white text */
     padding: 20px;
     text-align: center;
 }
@@ -36,8 +29,8 @@ header {
 #course-title {
     display: block;
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
     font-weight: 700;
+    font-size: 2rem;
     margin-bottom: 15px;
 }
 
@@ -51,19 +44,16 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
     color: #ffffff;
-    /* standard hex for white */
+    text-decoration: none;
     font-weight: 500;
     padding: 5px 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
     background-color: #ffffff;
-    /* white */
     color: #004080;
-    /* deep blue */
     border-radius: 5px;
 }
 
@@ -72,7 +62,6 @@ nav a:hover {
 
 .hero {
     background-color: #e6f0ff;
-    /* light blue background using hex */
     text-align: center;
     padding: 80px 20px;
 }
@@ -80,23 +69,19 @@ nav a:hover {
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    /* bold */
     color: #004080;
-    /* deep blue */
     font-size: 3rem;
     margin-bottom: 15px;
 }
 
 .hero-content p {
     font-weight: 600;
-    /* slightly bold */
-    font-size: 1.2rem;
     color: #004080;
-    /* deep blue */
+    font-size: 1.2rem;
 }
 
 
-/* Main */
+/* Main Grid */
 
 main {
     max-width: 1200px;
@@ -112,10 +97,9 @@ main {
 
 .card {
     background-color: #f2f2f2;
-    /* light gray */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 64, 128, 0.1);
     text-align: center;
 }
 
@@ -132,7 +116,7 @@ main {
 }
 
 .card a {
-    color: #004080;
+    color: #0066cc;
     text-decoration: none;
     font-weight: 600;
 }
