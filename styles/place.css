@@ -1,0 +1,67 @@
+:root {
+    --primary: #008751;
+    /* Nigeria green */
+    --secondary: #ffffff;
+    --dark: #222;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* HEADER */
+
+header {
+    background: var(--primary);
+    color: var(--secondary);
+    text-align: center;
+    padding: 1rem;
+}
+
+
+/* HERO */
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 1rem;
+}
+
+
+/* CARDS */
+
+.card {
+    background: #f4f4f4;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+}
+
+
+/* WEATHER ICON (DESKTOP ONLY) */
+
+@media (min-width: 768px) {
+    .weather h2::after {
+        content: " ⛅";
+    }
+}
