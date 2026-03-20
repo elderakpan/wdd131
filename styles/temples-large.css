@@ -1,8 +1,12 @@
 @media (min-width: 768px) {
     nav {
-        display: flex;
         flex-direction: row;
-        gap: 1rem;
+    }
+    #hamburger {
+        display: none;
+    }
+    nav.hide {
+        display: flex;
     }
     .temple-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
