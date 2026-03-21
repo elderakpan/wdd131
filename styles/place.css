@@ -1,67 +1,105 @@
 :root {
-    --primary: #008751;
-    /* Nigeria green */
-    --secondary: #ffffff;
-    --dark: #222;
+    --primary-color: #008751;
+    --secondary-color: #ffffff;
+    --text-color: #333;
+    --spacing: 1rem;
 }
+
+
+/* RESET */
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 
 /* HEADER */
 
 header {
-    background: var(--primary);
-    color: var(--secondary);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
-    padding: 1rem;
+    padding: var(--spacing);
 }
 
 
-/* HERO */
+/* HERO IMAGE */
 
 .hero img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 
-/* MAIN */
+/* MAIN CONTENT */
 
 main {
+    padding: var(--spacing);
     max-width: 900px;
-    margin: auto;
-    padding: 1rem;
+    margin: 0 auto;
 }
 
 
-/* CARDS */
+/* SECTIONS */
 
-.card {
-    background: #f4f4f4;
+.info,
+.weather {
+    margin-bottom: 1.5rem;
     padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 8px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+
+/* HEADINGS */
+
+h1,
+h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+
+/* WEATHER ICON (DESKTOP) */
+
+.weather h2::after {
+    content: " ⛅";
+}
+
+
+/* MOBILE SVG ICON */
+
+@media (max-width: 768px) {
+    .weather h2::after {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url("../images/weather.svg") no-repeat center;
+        background-size: contain;
+    }
+}
+
+
+/* DESKTOP LAYOUT */
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
 }
 
 
 /* FOOTER */
 
 footer {
+    background-color: #eee;
     text-align: center;
-    padding: 1rem;
-    background: var(--primary);
-    color: white;
-}
-
-
-/* WEATHER ICON (DESKTOP ONLY) */
-
-@media (min-width: 768px) {
-    .weather h2::after {
-        content: " ⛅";
-    }
+    padding: var(--spacing);
+    font-size: 0.9rem;
 }

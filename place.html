@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigeria | Place Page | Itoro Etim Akpan</title>
-    <meta name="description" content="Explore Nigeria, its culture, weather, and geography.">
+    <title>Nigeria</title>
+    <meta name="description" content="Discover Nigeria: culture, weather, and geography.">
     <meta name="author" content="Itoro Etim Akpan">
 
     <link rel="stylesheet" href="styles/place.css">
@@ -15,40 +15,36 @@
 <body>
 
     <header>
-        <h1>Nigeria</h1>
+        <h1>Discover Nigeria</h1>
     </header>
 
-    <!-- HERO (RESPONSIVE IMAGE) -->
     <section class="hero">
         <picture>
-            <source srcset="images/nigeria-large.webp" media="(min-width: 768px)">
-            <img src="images/nigeria-small-2.webp" alt="Beautiful view of Nigeria">
+            <source srcset="images/nigeria-hero-large.webp" media="(min-width: 768px)">
+            <img src="images/nigeria-hero-small.webp" alt="Beautiful landscape of Nigeria" sizes="100vw">
         </picture>
     </section>
-
     <main>
 
-        <!-- ABOUT -->
-        <section class="card">
+        <section class="info">
             <h2>About Nigeria</h2>
             <p>
-                Nigeria is a country in West Africa known for its rich culture, diverse languages, and vibrant economy. It is the most populous country in Africa.
+                Nigeria is a vibrant country in West Africa known for its rich culture, large population, and diverse traditions. It is one of the largest economies in Africa.
             </p>
         </section>
 
-        <!-- WEATHER -->
-        <section class="card weather">
+        <section class="weather">
             <h2>Weather</h2>
-            <p>Temperature: <span id="temp">8</span> °C</p>
+            <p>Temperature: <span id="temp">30</span> °C</p>
             <p>Wind Speed: <span id="wind">10</span> km/h</p>
-            <p>Wind Chill: <span id="windchill"></span></p>
+            <p>Wind Chill: <span id="windChill"></span></p>
         </section>
 
     </main>
 
     <footer>
-        <p>© <span id="year"></span> | Itoro Etim Akpan | Nigeria</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="year"></span></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 
 </body>
