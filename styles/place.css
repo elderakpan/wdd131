@@ -1,3 +1,5 @@
+/* Global Variables */
+
 :root {
     --primary-color: #008751;
     --secondary-color: #ffffff;
@@ -6,17 +8,13 @@
 }
 
 
-/* RESET */
+/* Global Styles */
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: var(--text-color);
-    line-height: 1.6;
 }
-
-
-/* HEADER */
 
 header {
     background-color: var(--primary-color);
@@ -25,52 +23,36 @@ header {
     padding: var(--spacing);
 }
 
-
-/* HERO IMAGE */
-
 .hero img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-
-/* MAIN CONTENT */
-
 main {
     padding: var(--spacing);
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 
-/* SECTIONS */
+/* Info & Weather Sections */
 
 .info,
 .weather {
     margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: #f9f9f9;
-    border-radius: 5px;
 }
 
 
-/* HEADINGS */
-
-h1,
-h2 {
-    margin: 0 0 0.5rem 0;
-}
-
-
-/* WEATHER ICON (DESKTOP) */
+/* Weather icon for desktop */
 
 .weather h2::after {
     content: " ⛅";
+    /* desktop emoji icon */
+    display: inline-block;
+    margin-left: 0.5rem;
 }
 
 
-/* MOBILE SVG ICON */
+/* Weather icon for mobile - SVG */
 
 @media (max-width: 768px) {
     .weather h2::after {
@@ -80,11 +62,12 @@ h2 {
         height: 24px;
         background: url("../images/weather.svg") no-repeat center;
         background-size: contain;
+        margin-left: 0.5rem;
     }
 }
 
 
-/* DESKTOP LAYOUT */
+/* Desktop Grid Layout */
 
 @media (min-width: 768px) {
     main {
@@ -95,11 +78,10 @@ h2 {
 }
 
 
-/* FOOTER */
+/* Footer */
 
 footer {
     background-color: #eee;
     text-align: center;
     padding: var(--spacing);
-    font-size: 0.9rem;
 }
