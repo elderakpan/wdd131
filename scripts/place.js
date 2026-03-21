@@ -1,21 +1,15 @@
-// Static weather data
-const temp = 30; // °C
-const windSpeed = 10; // km/h
+const weatherIcon = document.querySelector('.weather-icon');
 
-// Calculate wind chill if applicable
-function calculateWindChill(temp, wind) {
-    if (temp <= 10 && wind > 4.8) {
-        return Math.round(13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16));
-    } else {
-        return "N/A";
+function updateWeatherIcon(condition) {
+    if (condition === 'rainy') {
+        weatherIcon.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32">
+                <circle cx="32" cy="32" r="14" fill="#8AC6FF"/>
+                <line x1="32" y1="46" x2="32" y2="60" stroke="#0066CC" stroke-width="4"/>
+            </svg>
+        `;
     }
 }
 
-// Display wind chill
-document.getElementById("windChill").textContent = calculateWindChill(temp, windSpeed);
-
-// Set footer year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Set last modified date
-document.getElementById("lastModified").textContent = document.lastModified;
+// Example:
+updateWeatherIcon('rainy');
