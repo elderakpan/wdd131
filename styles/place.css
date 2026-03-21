@@ -1,62 +1,81 @@
-                         :root {
-                            --primary-color: #008751;
-                            --secondary-color: #ffffff;
-                            --text-color: #333;
-                            --spacing: 1rem;
-                        }
-                        
-                        body {
-                            margin: 0;
-                            font-family: Arial, sans-serif;
-                            color: var(--text-color);
-                        }
-                        
-                        header {
-                            background-color: var(--primary-color);
-                            color: var(--secondary-color);
-                            text-align: center;
-                            padding: var(--spacing);
-                        }
-                        
-                        .hero img {
-                            width: 100%;
-                            height: auto;
-                            display: block;
-                        }
-                        
-                        main {
-                            padding: var(--spacing);
-                        }
-                        /* STACKED (MOBILE) */
-                        
-                        .weather-info {
-                            display: flex;
-                            align-items: center;
-                            gap: 12px;
-                            /* space between icon and text */
-                        }
-                        
-                        .weather-icon {
-                            flex-shrink: 0;
-                            /* prevent shrinking */
-                        }
-                        
-                        .weather-text p {
-                            margin: 4px 0;
-                            font-size: 1rem;
-                        }
-                        /* DESKTOP LAYOUT */
-                        
-                        @media (min-width: 768px) {
-                            main {
-                                display: grid;
-                                grid-template-columns: 1fr 1fr;
-                                gap: 2rem;
-                            }
-                        }
-                        
-                        footer {
-                            background-color: #eee;
-                            text-align: center;
-                            padding: var(--spacing);
-                        }
+:root {
+    --primary-color: #008751;
+    --secondary-color: #ffffff;
+    --text-color: #333;
+    --spacing: 1rem;
+}
+
+
+/* GLOBAL */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: var(--spacing);
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+main {
+    padding: var(--spacing);
+}
+
+
+/* SECTIONS */
+
+.info,
+.weather {
+    margin-bottom: 1.5rem;
+}
+
+
+/* WEATHER LAYOUT */
+
+.weather-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* REQUIRED ::after (assignment requirement) */
+
+.weather h2::after {
+    content: " ⛅";
+    margin-left: 0.5rem;
+}
+
+
+/* DESKTOP GRID */
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: var(--spacing);
+}
