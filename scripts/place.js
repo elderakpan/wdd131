@@ -1,23 +1,21 @@
-// Static values
-const temp = 30; // Temperature in °C
-const windSpeed = 10; // Wind speed in km/h
+// Static weather data
+const temp = 30; // °C
+const windSpeed = 10; // km/h
 
-// Function to calculate wind chill
-function calculateWindChill(t, s) {
-    return 13.12 + 0.6215 * t - 11.37 * Math.pow(s, 0.16) + 0.3965 * t * Math.pow(s, 0.16);
+// Calculate wind chill if applicable
+function calculateWindChill(temp, wind) {
+    if (temp <= 10 && wind > 4.8) {
+        return Math.round(13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16));
+    } else {
+        return "N/A";
+    }
 }
 
-// Determine if wind chill is applicable
-let windChill = "N/A";
-if (temp <= 10 && windSpeed > 4.8) {
-    windChill = calculateWindChill(temp, windSpeed).toFixed(1) + " °C";
-}
+// Display wind chill
+document.getElementById("windChill").textContent = calculateWindChill(temp, windSpeed);
 
-// Update HTML
-document.getElementById("temp").textContent = temp;
-document.getElementById("wind").textContent = windSpeed;
-document.getElementById("windChill").textContent = windChill;
-
-// Update footer dates
+// Set footer year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Set last modified date
 document.getElementById("lastModified").textContent = document.lastModified;

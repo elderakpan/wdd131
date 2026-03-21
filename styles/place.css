@@ -1,14 +1,9 @@
-/* Global Variables */
-
 :root {
     --primary-color: #008751;
     --secondary-color: #ffffff;
     --text-color: #333;
     --spacing: 1rem;
 }
-
-
-/* Global Styles */
 
 body {
     margin: 0;
@@ -34,40 +29,29 @@ main {
 }
 
 
-/* Info & Weather Sections */
+/* STACKED (MOBILE) */
 
 .info,
 .weather {
     margin-bottom: 1.5rem;
 }
 
-
-/* Weather icon for desktop */
-
-.weather h2::after {
-    content: " ⛅";
-    /* desktop emoji icon */
-    display: inline-block;
-    margin-left: 0.5rem;
+.weather h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 
-/* Weather icon for mobile - SVG */
+/* SVG weather icon */
 
-@media (max-width: 768px) {
-    .weather h2::after {
-        content: "";
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        background: url("../images/weather.svg") no-repeat center;
-        background-size: contain;
-        margin-left: 0.5rem;
-    }
+.weather-icon {
+    width: 32px;
+    height: 32px;
 }
 
 
-/* Desktop Grid Layout */
+/* DESKTOP LAYOUT */
 
 @media (min-width: 768px) {
     main {
@@ -76,9 +60,6 @@ main {
         gap: 2rem;
     }
 }
-
-
-/* Footer */
 
 footer {
     background-color: #eee;
