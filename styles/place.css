@@ -1,68 +1,64 @@
-:root {
-    --primary-color: #008751;
-    --secondary-color: #ffffff;
-    --text-color: #333;
-    --spacing: 1rem;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
-}
-
-header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: var(--spacing);
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-main {
-    padding: var(--spacing);
-}
-
-
-/* STACKED (MOBILE) */
-
-.info,
-.weather {
-    margin-bottom: 1.5rem;
-}
-
-.weather h2 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-
-/* SVG weather icon */
-
-.weather-icon {
-    width: 32px;
-    height: 32px;
-}
-
-
-/* DESKTOP LAYOUT */
-
-@media (min-width: 768px) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
-}
-
-footer {
-    background-color: #eee;
-    text-align: center;
-    padding: var(--spacing);
-}
+                    :root {
+                       --primary-color: #008751;
+                       --secondary-color: #ffffff;
+                       --text-color: #333;
+                       --spacing: 1rem;
+                   }
+                   
+                   body {
+                       margin: 0;
+                       font-family: Arial, sans-serif;
+                       color: var(--text-color);
+                   }
+                   
+                   header {
+                       background-color: var(--primary-color);
+                       color: var(--secondary-color);
+                       text-align: center;
+                       padding: var(--spacing);
+                   }
+                   
+                   .hero img {
+                       width: 100%;
+                       height: auto;
+                       display: block;
+                   }
+                   
+                   main {
+                       padding: var(--spacing);
+                   }
+                   /* STACKED (MOBILE) */
+                   
+                   .info,
+                   .weather {
+                       margin-bottom: 1.5rem;
+                   }
+                   
+                   .weather h2::after {
+                       content: url("../images/weather.svg");
+                       display: inline-block;
+                       width: 24px;
+                       height: 24px;
+                       margin-left: 0.5rem;
+                   }
+                   /* SVG weather icon */
+                   
+                   .weather-icon {
+                       width: 32px;
+                       height: 32px;
+                   }
+                   /* DESKTOP LAYOUT */
+                   
+                   @media (min-width: 768px) {
+                       main {
+                           display: grid;
+                           grid-template-columns: 1fr 1fr;
+                           gap: 2rem;
+                       }
+                   }
+                   
+                   footer {
+                       background-color: #eee;
+                       text-align: center;
+                       padding: var(--spacing);
+                   }
