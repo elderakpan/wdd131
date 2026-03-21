@@ -28,6 +28,8 @@ header {
 
 main {
     padding: var(--spacing);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 
@@ -48,16 +50,25 @@ main {
 }
 
 .weather-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 
-/* REQUIRED ::after (assignment requirement) */
+/* REQUIRED ::after */
 
 .weather h2::after {
     content: " ⛅";
     margin-left: 0.5rem;
+}
+
+
+/* MOBILE FIX (hide emoji, use SVG) */
+
+@media (max-width: 768px) {
+    .weather h2::after {
+        content: "";
+    }
 }
 
 
