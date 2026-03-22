@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Filtered Temples | WDD131</title>
+    <meta name="description" content="Temple filtering page using JavaScript">
+    <meta name="author" content="Itoro Etim Akpan">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <button data-filter="all">Home</button>
+            <button data-filter="old">Old</button>
+            <button data-filter="new">New</button>
+            <button data-filter="large">Large</button>
+            <button data-filter="small">Small</button>
+        </nav>
+    </header>
+
+    <main id="templeContainer"></main>
+
+    <footer>
+        <p>© <span id="year"></span> | Itoro Etim Akpan</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
