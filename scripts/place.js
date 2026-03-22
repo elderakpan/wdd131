@@ -1,17 +1,25 @@
-// Footer
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+// STATIC VALUES
+const temperature = 8; // °C
+const windSpeed = 10; // km/h
 
-// Static values
-const temp = 30;
-const wind = 10;
+// DISPLAY VALUES
+document.getElementById("temp").textContent = temperature;
+document.getElementById("wind").textContent = windSpeed;
 
-// Wind chill function
-function calculateWindChill(t, w) {
-    return (t <= 10 && w > 4.8) ?
-        Math.round(13.12 + 0.6215 * t - 11.37 * Math.pow(w, 0.16) + 0.3965 * t * Math.pow(w, 0.16)) + " °C" :
-        "N/A";
+// WIND CHILL FUNCTION (1 line)
+function calculateWindChill(temp, speed) {
+    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16);
 }
 
-// Display result
-document.getElementById("windChill").textContent = calculateWindChill(temp, wind);
+// APPLY CONDITIONS
+let windChill = "N/A";
+
+if (temperature <= 10 && windSpeed > 4.8) {
+    windChill = calculateWindChill(temperature, windSpeed).toFixed(1) + " °C";
+}
+
+document.getElementById("windchill").textContent = windChill;
+
+// FOOTER
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;

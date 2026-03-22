@@ -1,92 +1,86 @@
 :root {
-    --primary-color: #008751;
-    --secondary-color: #ffffff;
-    --text-color: #333;
-    --spacing: 1rem;
+    --primary: #008751;
+    --secondary: #ffffff;
+    --accent: #f4f4f4;
 }
 
 
-/* GLOBAL */
+/* GENERAL */
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    color: var(--text-color);
+    margin: 0;
+    background: var(--accent);
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background: var(--primary);
+    color: white;
     text-align: center;
-    padding: var(--spacing);
-}
-
-.hero img {
-    width: 100%;
-    display: block;
+    padding: 1rem;
 }
 
 main {
-    padding: var(--spacing);
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 
-/* SECTIONS */
+/* IMAGE */
 
-.info,
-.weather {
-    margin-bottom: 1.5rem;
+picture img {
+    width: 100%;
+    height: auto;
 }
 
 
-/* WEATHER LAYOUT */
+/* CARDS */
 
-.weather-box {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.card {
+    background: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
 }
+
+
+/* WEATHER ICON (mobile) */
 
 .weather-icon {
-    width: 50px;
-    height: 50px;
-}
-
-
-/* REQUIRED ::after */
-
-.weather h2::after {
-    content: " ⛅";
-    margin-left: 0.5rem;
-}
-
-
-/* MOBILE FIX (hide emoji, use SVG) */
-
-@media (max-width: 768px) {
-    .weather h2::after {
-        content: "";
-    }
-}
-
-
-/* DESKTOP GRID */
-
-@media (min-width: 768px) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
+    display: block;
 }
 
 
 /* FOOTER */
 
 footer {
-    background-color: #eee;
     text-align: center;
-    padding: var(--spacing);
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+}
+
+
+/* 🔥 MEDIA QUERY (large view) */
+
+@media (min-width: 768px) {
+    .weather-icon {
+        display: none;
+        /* hide SVG */
+    }
+    /* ✅ REQUIRED PSEUDO-ELEMENT */
+    .weather h2::after {
+        content: " ⛅";
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    picture {
+        grid-column: span 2;
+    }
 }

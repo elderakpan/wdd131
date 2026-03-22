@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Nigeria | Place Page | Itoro Etim Akpan</title>
-    <meta name="description" content="Discover Nigeria: culture, geography, weather, and people.">
+
+    <title>Nigeria | WDD131</title>
+    <meta name="description" content="A page about Nigeria including culture and weather.">
     <meta name="author" content="Itoro Etim Akpan">
 
     <link rel="stylesheet" href="styles/place.css">
@@ -15,53 +16,51 @@
 <body>
 
     <header>
-        <h1>Discover Nigeria</h1>
+        <h1>Nigeria</h1>
     </header>
-
-    <section class="hero">
-        <picture>
-            <source srcset="images/nigeria-hero-large.webp" media="(min-width: 768px)">
-            <img src="images/nigeria-hero-small.webp" alt="Beautiful view of Nigeria" sizes="100vw">
-        </picture>
-    </section>
 
     <main>
 
-        <section class="info">
+        <!-- HERO IMAGE -->
+        <picture>
+            <source srcset="images/nigeria-large.webp" media="(min-width:1000px)">
+            <source srcset="images/nigeria-medium.webp" media="(min-width:600px)">
+            <img src="images/nigeria-small.webp" alt="Nigeria landscape">
+        </picture>
+
+        <!-- ABOUT -->
+        <section class="card">
             <h2>About Nigeria</h2>
             <p>
-                Nigeria is a vibrant country in West Africa known for its rich culture, large population, and diverse traditions.
+                Nigeria is the most populous country in Africa, known for its rich culture, diverse ethnic groups, and vibrant cities like Lagos and Abuja.
             </p>
         </section>
 
-        <section class="weather">
+        <!-- WEATHER -->
+        <section class="card weather">
             <h2>Weather</h2>
 
-            <div class="weather-box">
-                <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sunny weather">
-                <circle cx="32" cy="32" r="14" fill="#FFD93B"></circle>
-                <g stroke="#FFD93B" stroke-width="4">
-                    <line x1="32" y1="2" x2="32" y2="14"></line>
-                    <line x1="32" y1="50" x2="32" y2="62"></line>
-                    <line x1="2" y1="32" x2="14" y2="32"></line>
-                    <line x1="50" y1="32" x2="62" y2="32"></line>
-                </g>
-            </svg>
-
-                <div>
-                    <p>Temperature: <span id="temp">30</span> °C</p>
-                    <p>Wind Speed: <span id="wind">10</span> km/h</p>
-                    <p>Wind Chill: <span id="windChill"></span></p>
-                </div>
+            <!-- SVG for mobile -->
+            <div class="weather-icon">
+                <svg width="40" height="40" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="20" fill="orange"/>
+      </svg>
             </div>
 
+            <ul>
+                <li>Temperature: <span id="temp"></span> °C</li>
+                <li>Wind Speed: <span id="wind"></span> km/h</li>
+                <li>Wind Chill: <span id="windchill"></span></li>
+            </ul>
         </section>
 
     </main>
 
     <footer>
-        <p>© <span id="year"></span> | Itoro Etim Akpan | Nigeria</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>
+            © <span id="year"></span> | Itoro Etim Akpan | Nigeria
+        </p>
+        <p id="lastModified"></p>
     </footer>
 
 </body>
