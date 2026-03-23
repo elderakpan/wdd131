@@ -4,35 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Filtered Temples | WDD131</title>
-    <meta name="description" content="Temple filtering page using JavaScript">
+    <meta name="description" content="A temple album page that allows users to filter temples by age and size using JavaScript.">
     <meta name="author" content="Itoro Etim Akpan">
-
     <link rel="stylesheet" href="styles/filtered-temples.css">
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
 
 <body>
-
     <header>
         <h1>Temple Album</h1>
         <nav>
-            <button data-filter="all">Home</button>
-            <button data-filter="old">Old</button>
-            <button data-filter="new">New</button>
-            <button data-filter="large">Large</button>
-            <button data-filter="small">Small</button>
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
         </nav>
     </header>
 
-    <main id="templeContainer"></main>
+    <main>
+        <section class="temple-cards">
+            <div class="temple-card" data-age="old" data-size="large">
+                <img src="images/ancient-temple.webp" alt="Ancient Temple">
+                <h2>Temple of Wisdom</h2>
+            </div>
+            <div class="temple-card" data-age="new" data-size="small">
+                <img src="images/moden-temple.webp" alt="Modern Temple">
+                <h2>Temple of Peace</h2>
+            </div>
+            <!-- Add more temple cards as needed -->
+        </section>
+    </main>
 
     <footer>
-        <p>© <span id="year"></span> | Itoro Etim Akpan</p>
-        <p id="lastModified"></p>
+        <p>Copyright © Brigham Young University-Idaho | Itoro Etim Akpan</p>
     </footer>
-
 </body>
 
 </html>

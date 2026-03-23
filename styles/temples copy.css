@@ -1,84 +1,105 @@
-:root {
-    --primary: #2e7d32;
-    --secondary: #f5f5f5;
-    --text: #222;
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    background: var(--secondary);
-    color: var(--text);
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 
-/* HEADER */
+/* Header */
 
 header {
-    background: var(--primary);
+    background-color: #444;
     color: white;
+    padding: 1rem 0;
     text-align: center;
-    padding: 1rem;
 }
+
+
+/* Navigation Flexbox */
 
 nav {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
 }
 
-nav button {
-    margin: 5px;
-    padding: 8px 12px;
-    border: none;
-    cursor: pointer;
-    background: white;
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #666;
     border-radius: 5px;
 }
 
-nav button:hover {
-    background: #ddd;
-}
 
-
-/* MAIN GRID */
+/* Main Section */
 
 main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+
+/* Temple Cards Grid */
+
+.temple-cards {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 1.5rem;
 }
 
-
-/* CARD */
-
-.card {
-    background: white;
+.temple-card {
+    background-color: white;
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
+.temple-card img {
     width: 100%;
-    height: auto;
+    max-width: 300px;
     border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 
-/* DESKTOP */
+/* Responsive Media Queries */
 
 @media (min-width: 768px) {
-    main {
+    .temple-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .temple-cards {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 
-/* FOOTER */
+/* Footer */
 
 footer {
     text-align: center;
     padding: 1rem;
-    background: var(--primary);
+    background-color: #444;
     color: white;
+    margin-top: 2rem;
 }
