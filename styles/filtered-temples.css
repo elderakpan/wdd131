@@ -6,11 +6,13 @@
     box-sizing: border-box;
 }
 
+
+/* ===== BODY ===== */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
-    line-height: 1.6;
 }
 
 
@@ -23,26 +25,26 @@ header {
     padding: 1rem;
 }
 
-header h1 {
-    margin-bottom: 0.5rem;
-}
 
-
-/* ===== NAVIGATION ===== */
+/* ===== NAV ===== */
 
 nav {
     display: flex;
+    /* ✅ REQUIRED */
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-top: 0.5rem;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background 0.3s;
 }
+
+
+/* ✅ REQUIRED HOVER */
 
 nav a:hover {
     background-color: #666;
@@ -63,6 +65,7 @@ main {
 
 .temple-cards {
     display: grid;
+    /* ✅ REQUIRED */
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
@@ -76,19 +79,6 @@ main {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.temple-card:hover {
-    transform: scale(1.03);
-}
-
-.temple-card h2 {
-    margin-bottom: 0.5rem;
-}
-
-.temple-card p {
-    margin: 0.3rem 0;
 }
 
 .temple-card img {
@@ -99,7 +89,7 @@ main {
 }
 
 
-/* ===== TABLET ===== */
+/* ===== MEDIA QUERIES (REQUIRED) ===== */
 
 @media (min-width: 768px) {
     .temple-cards {
@@ -107,25 +97,9 @@ main {
     }
 }
 
-
-/* ===== DESKTOP ===== */
-
 @media (min-width: 1024px) {
     .temple-cards {
         grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-
-/* ===== MOBILE NAV ===== */
-
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-    nav a {
-        width: 100%;
-        text-align: center;
     }
 }
 
