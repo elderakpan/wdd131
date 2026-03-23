@@ -1,4 +1,4 @@
-/* General Reset */
+/* ===== RESET ===== */
 
 * {
     margin: 0;
@@ -8,36 +8,40 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f5f5f5;
     color: #333;
+    line-height: 1.6;
 }
 
 
-/* Header */
+/* ===== HEADER ===== */
 
 header {
     background-color: #444;
     color: white;
-    padding: 1rem 0;
     text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
 }
 
 
-/* Navigation Flexbox */
+/* ===== NAVIGATION ===== */
 
 nav {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 0.5rem;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
 }
 
 nav a:hover {
@@ -46,16 +50,16 @@ nav a:hover {
 }
 
 
-/* Main Section */
+/* ===== MAIN ===== */
 
 main {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
 
-/* Temple Cards Grid */
+/* ===== GRID ===== */
 
 .temple-cards {
     display: grid;
@@ -63,23 +67,39 @@ main {
     gap: 1.5rem;
 }
 
+
+/* ===== CARD ===== */
+
 .temple-card {
-    background-color: white;
+    background: white;
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.temple-card:hover {
+    transform: scale(1.03);
+}
+
+.temple-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+.temple-card p {
+    margin: 0.3rem 0;
 }
 
 .temple-card img {
     width: 100%;
     max-width: 300px;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
 }
 
 
-/* Responsive Media Queries */
+/* ===== TABLET ===== */
 
 @media (min-width: 768px) {
     .temple-cards {
@@ -87,14 +107,30 @@ main {
     }
 }
 
-@media (min-width: 1200px) {
+
+/* ===== DESKTOP ===== */
+
+@media (min-width: 1024px) {
     .temple-cards {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 
-/* Footer */
+/* ===== MOBILE NAV ===== */
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* ===== FOOTER ===== */
 
 footer {
     text-align: center;

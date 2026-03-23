@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtered Temples | WDD131</title>
-    <meta name="description" content="A temple album page that allows users to filter temples by age and size using JavaScript.">
+    <title>Temple Album | Filtered Temples</title>
+    <meta name="description" content="Temple album with filtering by age and size using JavaScript.">
     <meta name="author" content="Itoro Etim Akpan">
+
     <link rel="stylesheet" href="styles/filtered-temples.css">
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
@@ -15,30 +16,21 @@
     <header>
         <h1>Temple Album</h1>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Old</a>
-            <a href="#">New</a>
-            <a href="#">Large</a>
-            <a href="#">Small</a>
+            <a href="#" data-filter="all">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
         </nav>
     </header>
 
     <main>
-        <section class="temple-cards">
-            <div class="temple-card" data-age="old" data-size="large">
-                <img src="images/ancient-temple.webp" alt="Ancient Temple">
-                <h2>Temple of Wisdom</h2>
-            </div>
-            <div class="temple-card" data-age="new" data-size="small">
-                <img src="images/moden-temple.webp" alt="Modern Temple">
-                <h2>Temple of Peace</h2>
-            </div>
-            <!-- Add more temple cards as needed -->
-        </section>
+        <section class="temple-cards"></section>
     </main>
 
     <footer>
-        <p>Copyright © Brigham Young University-Idaho | Itoro Etim Akpan</p>
+        <p>&copy; <span id="year"></span> Brigham Young University-Idaho | Itoro Etim Akpan</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
