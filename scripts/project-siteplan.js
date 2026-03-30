@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     boxes.forEach(box => {
         box.addEventListener("mouseover", () => {
             box.style.backgroundColor = "#ffebcc"; // light orange highlight
-            box.style.borderColor = "#ff8c00"; // orange border
+            box.style.borderColor = "#ff8c00";
         });
 
         box.addEventListener("mouseout", () => {
