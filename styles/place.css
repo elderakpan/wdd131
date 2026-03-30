@@ -1,54 +1,84 @@
-:root {
-    --primary: #008751;
-    --secondary: #ffffff;
-    --accent: #f4f4f4;
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-/* GENERAL */
+/* BODY */
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    background: var(--accent);
+    background: #f4f4f4;
+    line-height: 1.6;
 }
 
+
+/* HEADER */
+
 header {
-    background: var(--primary);
+    background: #006400;
     color: white;
     text-align: center;
     padding: 1rem;
 }
 
+
+/* MAIN */
+
 main {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: auto;
     padding: 1rem;
 }
 
 
-/* IMAGE */
+/* HERO IMAGE */
 
 picture img {
     width: 100%;
-    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 
-/* CARDS */
+/* CARD SECTIONS */
 
 .card {
     background: white;
-    padding: 1rem;
+    padding: 1.5rem;
     margin: 1rem 0;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 
-/* WEATHER ICON (mobile) */
+/* HEADINGS */
+
+h2 {
+    margin-bottom: 0.5rem;
+    color: #006400;
+}
+
+
+/* WEATHER SECTION */
+
+.weather ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.weather li {
+    margin: 0.5rem 0;
+}
+
+
+/* WEATHER ICON */
 
 .weather-icon {
-    display: block;
+    margin-top: 10px;
 }
 
 
@@ -56,31 +86,20 @@ picture img {
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background: var(--primary);
+    background: #006400;
     color: white;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
 
-/* 🔥 MEDIA QUERY (large view) */
+/* RESPONSIVE */
 
 @media (min-width: 768px) {
-    .weather-icon {
-        display: none;
-        /* hide SVG */
-    }
-    /* ✅ REQUIRED PSEUDO-ELEMENT */
-    .weather h2::after {
-        content: " ⛅";
-        font-size: 1.5rem;
-        margin-left: 10px;
-    }
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        padding: 2rem;
     }
-    picture {
-        grid-column: span 2;
+    .card {
+        padding: 2rem;
     }
 }
