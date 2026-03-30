@@ -1,13 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
     const boxes = document.querySelectorAll(".box");
 
-    boxes.forEach(box => {
-        box.addEventListener("mouseover", () => {
+    boxes.forEach(function(box) {
+        box.addEventListener("mouseover", function() {
             box.style.backgroundColor = "#ffebcc"; // light orange highlight
             box.style.borderColor = "#ff8c00";
         });
 
-        box.addEventListener("mouseout", () => {
+        box.addEventListener("mouseout", function() {
+            // Reset colors based on box type
             if (box.classList.contains('header-box') || box.classList.contains('footer-box')) {
                 box.style.backgroundColor = "#006400";
                 box.style.color = "white";

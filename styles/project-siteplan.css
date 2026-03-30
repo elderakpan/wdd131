@@ -6,6 +6,9 @@
     box-sizing: border-box;
 }
 
+
+/* BODY STYLING */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -29,20 +32,20 @@ header h1 {
 }
 
 
-/* SECTIONS */
+/* MAIN SECTIONS */
 
 main {
     max-width: 900px;
-    margin: auto;
-    padding: 1rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 section {
     background-color: white;
     padding: 1.5rem;
-    margin: 1rem 0;
+    margin-bottom: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
 }
 
 h2 {
@@ -65,7 +68,7 @@ ul {
 }
 
 
-/* WIREFRAMES */
+/* WIREFRAME BOXES */
 
 .wireframe {
     border: 2px dashed #ccc;
@@ -88,7 +91,6 @@ ul {
     border-radius: 8px;
     border: 1px solid #333;
     background-color: #e8f5e9;
-    transition: all 0.3s ease;
 }
 
 
