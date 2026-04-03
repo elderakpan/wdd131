@@ -4,34 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album | Filtered Temples</title>
-    <meta name="description" content="Temple album with filtering by age and size using JavaScript.">
+    <title>Temple Album – Itoro Etim Akpan</title>
+    <meta name="description" content="Responsive Temple Album page showcasing temples around the world.">
     <meta name="author" content="Itoro Etim Akpan">
-
     <link rel="stylesheet" href="styles/filtered-temples.css">
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
 
 <body>
+
     <header>
         <h1>Temple Album</h1>
         <nav>
-            <a href="#" data-filter="all">Home</a>
-            <a href="#" data-filter="old">Old</a>
-            <a href="#" data-filter="new">New</a>
-            <a href="#" data-filter="large">Large</a>
-            <a href="#" data-filter="small">Small</a>
+            <button id="home">Home</button>
+            <button id="old">Old</button>
+            <button id="new">New</button>
+            <button id="large">Large</button>
+            <button id="small">Small</button>
         </nav>
     </header>
 
     <main>
-        <section class="temple-cards"></section>
+        <div id="temple-container"></div>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Brigham Young University-Idaho | Itoro Etim Akpan</p>
+        <p>© <span id="year"></span> | Itoro Etim Akpan | Nigeria</p>
         <p id="lastModified"></p>
     </footer>
+
 </body>
 
 </html>
