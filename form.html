@@ -3,11 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- ✅ REQUIRED VIEWPORT -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Product Review Form – Itoro Etim Akpan</title>
 
-    <!-- ✅ FIXED META DESCRIPTION -->
-    <meta name="description" content="Submit a detailed product review including ratings, features, and feedback to help others make informed decisions.">
+    <!-- ✅ FIXED META DESCRIPTION (50–160 chars) -->
+    <meta name="description" content="Submit a detailed product review including ratings, installation date, useful features, and user feedback to help others make informed decisions.">
+
     <meta name="author" content="Itoro Etim Akpan">
 
     <link rel="stylesheet" href="styles/form.css">
@@ -29,7 +33,7 @@
             <option value="" disabled selected>Select a Product ...</option>
         </select>
 
-            <!-- ✅ FIXED RATING -->
+            <!-- Rating -->
             <fieldset>
                 <legend>Overall Rating*</legend>
 
@@ -74,7 +78,7 @@
 
             <!-- Review -->
             <label for="reviewText">Written Review</label>
-            <textarea id="reviewText" name="reviewText" rows="5"></textarea>
+            <textarea id="reviewText" name="reviewText" rows="5" placeholder="Write your review here..."></textarea>
 
             <!-- Name -->
             <label for="userName">Your Name</label>
