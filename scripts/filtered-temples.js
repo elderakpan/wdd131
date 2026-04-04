@@ -3,7 +3,7 @@ const temples = [{
         location: "Salt Lake City, Utah, USA",
         dedicated: 1893,
         area: 253000,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-lds-2.jpg"
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-lds.jpg"
     },
     {
         templeName: "Laie Hawaii Temple",
