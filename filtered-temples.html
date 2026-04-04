@@ -7,7 +7,17 @@
     <title>Temple Album – Itoro Etim Akpan</title>
     <meta name="description" content="Responsive Temple Album page showcasing temples around the world.">
     <meta name="author" content="Itoro Etim Akpan">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <!-- JS -->
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
 
@@ -15,21 +25,25 @@
 
     <header>
         <h1>Temple Album</h1>
-        <nav>
-            <button id="home">Home</button>
-            <button id="old">Old</button>
-            <button id="new">New</button>
-            <button id="large">Large</button>
-            <button id="small">Small</button>
-        </nav>
     </header>
 
+    <nav>
+        <button id="home">Home</button>
+        <button id="old">Old</button>
+        <button id="new">New</button>
+        <button id="large">Large</button>
+        <button id="small">Small</button>
+    </nav>
+
     <main>
+        <h2>Church Temples</h2>
+
+        <!-- ✅ EMPTY container (IMPORTANT) -->
         <div id="temple-container"></div>
     </main>
 
     <footer>
-        <p>© <span id="year"></span> | Itoro Etim Akpan | Nigeria</p>
+        <p>© <span id="currentyear"></span> | Itoro Etim Akpan | Nigeria</p>
         <p id="lastModified"></p>
     </footer>
 

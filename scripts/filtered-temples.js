@@ -1,100 +1,119 @@
+// ✅ TEMPLE ARRAY (correct structure)
 const temples = [{
         templeName: "Salt Lake Temple",
         location: "Salt Lake City, Utah, USA",
-        dedicated: 1893,
+        dedicated: "1893",
         area: 253000,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-lds.jpg"
+        imageUrl: "images/salt-lake-temple-37020.jpg"
     },
     {
         templeName: "Laie Hawaii Temple",
         location: "Laie, Hawaii, USA",
-        dedicated: 1919,
+        dedicated: "1919",
         area: 42100,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/laie-hawaii-temple/laie-hawaii-temple-lds-8.jpg"
+        imageUrl: "images/laie-hawaii-temple-7370.jpg"
     },
     {
-        templeName: "Accra Ghana Temple",
-        location: "Accra, Ghana",
-        dedicated: 2004,
-        area: 17500,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-lds-9.jpg"
-    },
-    {
-        templeName: "Paris France Temple",
-        location: "Paris, France",
-        dedicated: 2017,
-        area: 44000,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-lds-3.jpg"
-    },
-    {
-        templeName: "Tokyo Japan Temple",
-        location: "Tokyo, Japan",
-        dedicated: 1980,
-        area: 53000,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-lds-4.jpg"
+        templeName: "Cardston Alberta Temple",
+        location: "Cardston, Alberta, Canada",
+        dedicated: "1923",
+        area: 88000,
+        imageUrl: "images/cardston-alberta-temple-13287.jpg"
     },
     {
         templeName: "Rome Italy Temple",
         location: "Rome, Italy",
-        dedicated: 2019,
-        area: 40000,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-lds-10.jpg"
+        dedicated: "2019",
+        area: 41000,
+        imageUrl: "images/rome-italy-temple-2642.jpg"
     },
     {
-        templeName: "Logan Utah Temple",
-        location: "Logan, Utah, USA",
-        dedicated: 1884,
-        area: 119000,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/logan-utah-temple/logan-utah-temple-lds-3.jpg"
+        templeName: "Paris France Temple",
+        location: "Paris, France",
+        dedicated: "2017",
+        area: 44000,
+        imageUrl: "images/paris-france-temple-2056.jpg"
+    },
+    {
+        templeName: "Accra Ghana Temple",
+        location: "Accra, Ghana",
+        dedicated: "2004",
+        area: 17500,
+        imageUrl: "images/accra-ghana-temple-13760.jpg"
+    },
+    {
+        templeName: "Lagos Nigeria Temple",
+        location: "Lagos, Nigeria",
+        dedicated: "2025",
+        area: 12000,
+        imageUrl: "images/lagos-nigeria-temple-58577.jpg"
     },
     {
         templeName: "Manti Utah Temple",
         location: "Manti, Utah, USA",
-        dedicated: 1888,
+        dedicated: "1888",
         area: 74792,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/manti-utah-temple/manti-utah-temple-lds-3.jpg"
+        imageUrl: "images/manti-utah-temple-40551.jpg"
     },
     {
         templeName: "Payson Utah Temple",
         location: "Payson, Utah, USA",
-        dedicated: 2015,
+        dedicated: "2015",
         area: 96630,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/payson-utah-temple/payson-utah-temple-lds-12.jpg"
+        imageUrl: "images/payson-utah-temple-62834.jpg"
     }
 ];
 
-const container = document.getElementById("temple-container");
 
+// ✅ DISPLAY FUNCTION (FIXED)
 function displayTemples(templeList) {
+    const container = document.getElementById("temple-container");
+
+    // clear before display
     container.innerHTML = "";
 
     templeList.forEach(temple => {
-        const card = document.createElement("section");
+        const card = document.createElement("figure");
 
-        card.innerHTML = `
-            <h2>${temple.templeName}</h2>
-            <p><strong>Location:</strong> ${temple.location}</p>
-            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-            <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-            <img src="${temple.imageUrl}" 
-                 alt="${temple.templeName}" 
-                 loading="lazy"
-                 onerror="this.src='https://via.placeholder.com/300x200?text=Temple'">
-        `;
+        const img = document.createElement("img");
+        img.src = temple.imageUrl;
+        img.alt = temple.templeName;
+        img.loading = "lazy";
+
+        const name = document.createElement("h3");
+        name.textContent = temple.templeName;
+
+        const location = document.createElement("p");
+        location.innerHTML = `<strong>Location:</strong> ${temple.location}`;
+
+        const dedicated = document.createElement("p");
+        dedicated.innerHTML = `<strong>Dedicated:</strong> ${temple.dedicated}`;
+
+        const area = document.createElement("p");
+        area.innerHTML = `<strong>Area:</strong> ${temple.area.toLocaleString()} sq ft`;
+
+        card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedicated);
+        card.appendChild(area);
 
         container.appendChild(card);
     });
 }
 
-// FILTER BUTTONS
-document.getElementById("home").addEventListener("click", () => displayTemples(temples));
+
+// ✅ FILTER BUTTONS (ALL FIXED)
+document.getElementById("home").addEventListener("click", () => {
+    displayTemples(temples);
+});
 
 document.getElementById("old").addEventListener("click", () => {
-    displayTemples(temples.filter(t => t.dedicated < 1900));
+    displayTemples(temples.filter(t => parseInt(t.dedicated) < 1900));
 });
 
 document.getElementById("new").addEventListener("click", () => {
-    displayTemples(temples.filter(t => t.dedicated > 2000));
+    displayTemples(temples.filter(t => parseInt(t.dedicated) > 2000));
 });
 
 document.getElementById("large").addEventListener("click", () => {
@@ -105,9 +124,15 @@ document.getElementById("small").addEventListener("click", () => {
     displayTemples(temples.filter(t => t.area < 10000));
 });
 
-// FOOTER
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 
-// INITIAL LOAD
+// ✅ FOOTER (MATCHES YOUR HTML)
+document.getElementById("currentyear").textContent =
+    new Date().getFullYear();
+
+document.getElementById("lastModified").textContent =
+    `Last Modified: ${document.lastModified}`;
+
+
+
+// ✅ LOAD ALL ON START
 displayTemples(temples);
