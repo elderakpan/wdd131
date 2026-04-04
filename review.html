@@ -4,44 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Submitted</title>
+    <title>Product Review Form – Itoro Etim Akpan</title>
+    <meta name="description" content="Product review form for submitting feedback.">
+    <meta name="author" content="Itoro Etim Akpan">
+
     <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
 
     <header>
-        <h1>Thank You for Your Review!</h1>
+        <h1>Product Review Form</h1>
     </header>
 
     <main>
-        <p>Your review has been successfully submitted.</p>
-        <p>Total reviews submitted: <span id="reviewCount">0</span></p>
-        <a href="form.html">Submit another review</a>
+        <form method="get" action="review.html">
+
+            <!-- Product -->
+            <label for="product">Product Name*</label>
+            <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+        </select>
+
+            <!-- Rating -->
+            <fieldset>
+                <legend>Overall Rating*</legend>
+                <label><input type="radio" name="rating" value="1" required> 1 ☆</label>
+                <label><input type="radio" name="rating" value="2"> 2 ☆</label>
+                <label><input type="radio" name="rating" value="3"> 3 ☆</label>
+                <label><input type="radio" name="rating" value="4"> 4 ☆</label>
+                <label><input type="radio" name="rating" value="5"> 5 ☆</label>
+            </fieldset>
+
+            <!-- Date -->
+            <label for="installDate">Date of Installation*</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <!-- Features -->
+            <fieldset>
+                <legend>Useful Features</legend>
+
+                <label for="ease">
+                <input type="checkbox" id="ease" name="features" value="Ease of Use">
+                Ease of Use
+            </label>
+
+                <label for="durability">
+                <input type="checkbox" id="durability" name="features" value="Durability">
+                Durability
+            </label>
+
+                <label for="design">
+                <input type="checkbox" id="design" name="features" value="Design">
+                Design
+            </label>
+
+                <label for="performance">
+                <input type="checkbox" id="performance" name="features" value="Performance">
+                Performance
+            </label>
+            </fieldset>
+
+            <!-- Review -->
+            <label for="reviewText">Written Review</label>
+            <textarea id="reviewText" name="reviewText" rows="5" placeholder="Write your review here..."></textarea>
+
+            <!-- Name -->
+            <label for="userName">Your Name</label>
+            <input type="text" id="userName" name="userName">
+
+            <!-- Submit -->
+            <input type="submit" value="Submit Review">
+
+        </form>
     </main>
 
     <footer>
-        <p>© <span id="currentyear"></span> | Itoro Etim Akpan | Nigeria</p>
+        <p>© <span id="year"></span> | Itoro Etim Akpan | Nigeria</p>
         <p id="lastModified"></p>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Footer info
-            document.getElementById("currentyear").textContent = new Date().getFullYear();
-            document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
-
-            // Increment review counter
-            let count = localStorage.getItem("reviewCount");
-            if (!count) count = 0;
-            count = parseInt(count) + 1;
-            localStorage.setItem("reviewCount", count);
-            document.getElementById("reviewCount").textContent = count;
-        });
-    </script>
-    <p>
-        <button type="button" id="clearCounter">Clear Review Counter</button>
-    </p>
 </body>
 
 </html>
