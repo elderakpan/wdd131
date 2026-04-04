@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form – Itoro Etim Akpan</title>
-    <meta name="description" content="Product review form for submitting feedback.">
+
+    <!-- ✅ FIXED META DESCRIPTION -->
+    <meta name="description" content="Submit a detailed product review including ratings, features, and feedback to help others make informed decisions.">
     <meta name="author" content="Itoro Etim Akpan">
 
     <link rel="stylesheet" href="styles/form.css">
@@ -27,14 +29,25 @@
             <option value="" disabled selected>Select a Product ...</option>
         </select>
 
-            <!-- Rating -->
+            <!-- ✅ FIXED RATING -->
             <fieldset>
                 <legend>Overall Rating*</legend>
-                <label><input type="radio" name="rating" value="1" required> 1 ☆</label>
-                <label><input type="radio" name="rating" value="2"> 2 ☆</label>
-                <label><input type="radio" name="rating" value="3"> 3 ☆</label>
-                <label><input type="radio" name="rating" value="4"> 4 ☆</label>
-                <label><input type="radio" name="rating" value="5"> 5 ☆</label>
+
+                <input type="radio" id="rate1" name="rating" value="1" required>
+                <label for="rate1">1 ☆</label>
+
+                <input type="radio" id="rate2" name="rating" value="2" required>
+                <label for="rate2">2 ☆</label>
+
+                <input type="radio" id="rate3" name="rating" value="3" required>
+                <label for="rate3">3 ☆</label>
+
+                <input type="radio" id="rate4" name="rating" value="4" required>
+                <label for="rate4">4 ☆</label>
+
+                <input type="radio" id="rate5" name="rating" value="5" required>
+                <label for="rate5">5 ☆</label>
+
             </fieldset>
 
             <!-- Date -->
@@ -45,30 +58,23 @@
             <fieldset>
                 <legend>Useful Features</legend>
 
-                <label for="ease">
                 <input type="checkbox" id="ease" name="features" value="Ease of Use">
-                Ease of Use
-            </label>
+                <label for="ease">Ease of Use</label>
 
-                <label for="durability">
                 <input type="checkbox" id="durability" name="features" value="Durability">
-                Durability
-            </label>
+                <label for="durability">Durability</label>
 
-                <label for="design">
                 <input type="checkbox" id="design" name="features" value="Design">
-                Design
-            </label>
+                <label for="design">Design</label>
 
-                <label for="performance">
                 <input type="checkbox" id="performance" name="features" value="Performance">
-                Performance
-            </label>
+                <label for="performance">Performance</label>
+
             </fieldset>
 
             <!-- Review -->
             <label for="reviewText">Written Review</label>
-            <textarea id="reviewText" name="reviewText" rows="5" placeholder="Write your review here..."></textarea>
+            <textarea id="reviewText" name="reviewText" rows="5"></textarea>
 
             <!-- Name -->
             <label for="userName">Your Name</label>
