@@ -23,16 +23,16 @@ header {
 }
 
 
-/* NAV */
+/* NAV FLEX */
 
-nav {
+header nav {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 0.5rem;
 }
 
-nav a {
+header nav a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
@@ -42,7 +42,7 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover {
+header nav a:hover {
     background-color: #1e3a5f;
 }
 
