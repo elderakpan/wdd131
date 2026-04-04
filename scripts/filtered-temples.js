@@ -4,63 +4,63 @@ const temples = [{
         location: "Salt Lake City, Utah, USA",
         dedicated: "1893",
         area: 253000,
-        imageUrl: "images/salt-lake-temple-37020.jpg"
+        imageUrl: "images/salt-lake-temple.jpg"
     },
     {
         templeName: "Laie Hawaii Temple",
         location: "Laie, Hawaii, USA",
         dedicated: "1919",
         area: 42100,
-        imageUrl: "images/laie-hawaii-temple-7370.jpg"
+        imageUrl: "images/laie-hawaii-temple.jpg"
     },
     {
         templeName: "Cardston Alberta Temple",
         location: "Cardston, Alberta, Canada",
         dedicated: "1923",
         area: 88000,
-        imageUrl: "images/cardston-alberta-temple-13287.jpg"
+        imageUrl: "images/cardston-alberta-temple.jpg"
     },
     {
         templeName: "Rome Italy Temple",
         location: "Rome, Italy",
         dedicated: "2019",
         area: 41000,
-        imageUrl: "images/rome-italy-temple-2642.jpg"
+        imageUrl: "images/rome-italy-temple.jpg"
     },
     {
         templeName: "Paris France Temple",
         location: "Paris, France",
         dedicated: "2017",
         area: 44000,
-        imageUrl: "images/paris-france-temple-2056.jpg"
+        imageUrl: "images/paris-france-temple.jpg"
     },
     {
         templeName: "Accra Ghana Temple",
         location: "Accra, Ghana",
         dedicated: "2004",
         area: 17500,
-        imageUrl: "images/accra-ghana-temple-13760.jpg"
+        imageUrl: "images/accra-ghana-temple.jpg"
     },
     {
         templeName: "Lagos Nigeria Temple",
         location: "Lagos, Nigeria",
         dedicated: "2025",
         area: 12000,
-        imageUrl: "images/lagos-nigeria-temple-58577.jpg"
+        imageUrl: "images/lagos-nigeria-temple.jpg"
     },
     {
         templeName: "Manti Utah Temple",
         location: "Manti, Utah, USA",
         dedicated: "1888",
         area: 74792,
-        imageUrl: "images/manti-utah-temple-40551.jpg"
+        imageUrl: "images/manti-utah-temple.jpg"
     },
     {
         templeName: "Payson Utah Temple",
         location: "Payson, Utah, USA",
         dedicated: "2015",
         area: 96630,
-        imageUrl: "images/payson-utah-temple-62834.jpg"
+        imageUrl: "images/payson-utah-temple.jpg"
     }
 ];
 
