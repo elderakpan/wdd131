@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts/main.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="darkToggle">🌙</button>
+    </nav>
+
+    <h1>Food Gallery</h1>
+    <input type="text" id="search" placeholder="Search food...">
+
+    <div class="filters">
+        <button onclick="filterFood('all')">All</button>
+        <button onclick="filterFood('Main')">Main</button>
+        <button onclick="filterFood('Soup')">Soup</button>
+    </div>
+
+    <div id="foodList" class="grid"></div>
+
+    <footer>
+        <a href="references.html">References</a>
+    </footer>
+</body>
+
+</html>
