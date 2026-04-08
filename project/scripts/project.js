@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Tourist Places
+    // Tourist Places Data
     const placesData = [
         { name: "Zuma Rock", type: "nature", image: "images/zuma-rock.jpg" },
         { name: "Olumo Rock", type: "nature", image: "images/olumo-rock.jpg" },
@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const card = document.createElement("div");
             card.classList.add("card");
             card.innerHTML = `
-        <img src="${place.image}" alt="${place.name}" loading="lazy">
-        <h3>${place.name}</h3>
-      `;
+                <img src="${place.image}" alt="${place.name}" loading="lazy">
+                <h3>${place.name}</h3>
+            `;
             placesContainer.appendChild(card);
         });
     }
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const visitBtn = document.getElementById("visitBtn");
     const visitMsg = document.getElementById("visitMsg");
     if (visitBtn && visitMsg) {
-        let visits = localStorage.getItem("visits") ? parseInt(localStorage.getItem("visits")) : 0;
+        let visits = parseInt(localStorage.getItem("visits") || 0);
         visitMsg.textContent = `Visits: ${visits}`;
         visitBtn.addEventListener("click", () => {
             visits++;
@@ -46,11 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Dark Mode
+    // Dark Mode Toggle
     const darkBtn = document.getElementById("darkMode");
     if (darkBtn) darkBtn.addEventListener("click", () => document.body.classList.toggle("dark"));
 
-    // Contact Form
+    // Contact Form Submission
     const form = document.getElementById("contactForm");
     if (form) {
         form.addEventListener("submit", (e) => {
