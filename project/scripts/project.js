@@ -1,64 +1,63 @@
-// scripts/main.js
-if (darkMode === "enabled") {
-    document.body.classList.add("dark");
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-const toggles = document.querySelectorAll("#darkToggle");
-toggles.forEach(btn => {
-    btn.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
+    // Tourist Places
+    const placesData = [
+        { name: "Zuma Rock", type: "nature", image: "images/zuma-rock.jpg" },
+        { name: "Olumo Rock", type: "nature", image: "images/olumo-rock.jpg" },
+        { name: "Lekki Conservation Centre", type: "nature", image: "images/lekki-conservation.jpg" },
+        { name: "Lagos", type: "city", image: "images/lagos.jpg" },
+        { name: "Abuja", type: "city", image: "images/abuja.jpg" },
+        { name: "Kano", type: "city", image: "images/kano.jpg" }
+    ];
 
-        if (document.body.classList.contains("dark")) {
-            localStorage.setItem("darkMode", "enabled");
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-        }
-    });
-});
+    const placesContainer = document.getElementById("places");
 
-// FORM
-const form = document.querySelector("#contactForm");
-if (form) {
-    form.addEventListener("submit", e => {
-        e.preventDefault();
-
-        const name = document.querySelector("#name").value;
-        localStorage.setItem("username", name);
-
-        document.querySelector("#message").textContent = `Thanks ${name}!`;
-    });
-}
-
-// GREETING
-const greeting = document.querySelector("#greeting");
-if (greeting) {
-    const hour = new Date().getHours();
-
-    let message = "";
-    if (hour < 12) message = "Good Morning";
-    else if (hour < 18) message = "Good Afternoon";
-    else message = "Good Evening";
-
-    const savedUser = localStorage.getItem("username");
-    greeting.textContent = savedUser ? `${message}, ${savedUser}` : message;
-}
-
-// SCROLL ANIMATION
-function observeCards() {
-    const cards = document.querySelectorAll(".card");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
+    function displayPlaces(list) {
+        if (!placesContainer) return;
+        placesContainer.innerHTML = "";
+        list.forEach(place => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `
+        <img src="${place.image}" alt="${place.name}" loading="lazy">
+        <h3>${place.name}</h3>
+      `;
+            placesContainer.appendChild(card);
         });
-    });
+    }
 
-    cards.forEach(card => observer.observe(card));
-}
+    window.filterPlaces = (type) => {
+        if (type === "all") displayPlaces(placesData);
+        else displayPlaces(placesData.filter(p => p.type === type));
+    };
 
-// INIT
-window.addEventListener("DOMContentLoaded", () => {
-    displayFoods(foods);
+    displayPlaces(placesData);
+
+    // Visit Counter
+    const visitBtn = document.getElementById("visitBtn");
+    const visitMsg = document.getElementById("visitMsg");
+    if (visitBtn && visitMsg) {
+        let visits = localStorage.getItem("visits") ? parseInt(localStorage.getItem("visits")) : 0;
+        visitMsg.textContent = `Visits: ${visits}`;
+        visitBtn.addEventListener("click", () => {
+            visits++;
+            localStorage.setItem("visits", visits);
+            visitMsg.textContent = `Visits: ${visits}`;
+        });
+    }
+
+    // Dark Mode
+    const darkBtn = document.getElementById("darkMode");
+    if (darkBtn) darkBtn.addEventListener("click", () => document.body.classList.toggle("dark"));
+
+    // Contact Form
+    const form = document.getElementById("contactForm");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            document.getElementById("formMsg").textContent = "Message sent successfully!";
+            form.reset();
+        });
+    }
+
 });

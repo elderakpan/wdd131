@@ -4,36 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore</title>
-    <script defer src="scripts/main.js"></script>
+    <title>Explore Nigeria</title>
+    <meta name="description" content="Explore tourist attractions in Nigeria including natural landmarks and major cities.">
+    <meta name="author" content="Itoro Etim Akpan">
     <link rel="stylesheet" href="styles/styles.css">
-    <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/script.js"></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="culture.html">Culture</a></li>
-            <li><a href="explore.html">Explore</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button id="darkToggle">🌙</button>
-    </nav>
 
-    <h1>Tourist Attractions</h1>
-    <div class="grid">
-        <div class="card"><img src="images/zuma-rock.jpg" loading="lazy">
-            <p>Zuma Rock</p>
-        </div>
-        <div class="card"><img src="images/obudu-ranch.jpg" loading="lazy">
-            <p>Obudu Ranch</p>
-        </div>
-    </div>
+    <header>
+        <h1>Explore Nigeria</h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="explore.html" aria-current="page">Explore</a>
+            <a href="contact.html">Contact</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tourist Attractions</h2>
+
+            <div class="filters">
+                <button onclick="filterPlaces('all')">All</button>
+                <button onclick="filterPlaces('nature')">Nature</button>
+                <button onclick="filterPlaces('city')">City</button>
+            </div>
+
+            <div id="places" class="grid"></div>
+        </section>
+    </main>
 
     <footer>
+        <p>© <span id="currentyear"></span> | Itoro Etim Akpan | Nigeria</p>
+        <p id="lastModified"></p>
         <a href="references.html">References</a>
     </footer>
+
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
+    </script>
+
 </body>
 
 </html>
