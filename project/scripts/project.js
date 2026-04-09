@@ -1,63 +1,68 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-    // Tourist Places Data
-    const placesData = [
-        { name: "Zuma Rock", type: "nature", image: "images/zuma-rock.jpg" },
-        { name: "Olumo Rock", type: "nature", image: "images/olumo-rock.jpg" },
-        { name: "Lekki Conservation Centre", type: "nature", image: "images/lekki-conservation.jpg" },
-        { name: "Lagos", type: "city", image: "images/lagos.jpg" },
-        { name: "Abuja", type: "city", image: "images/abuja.jpg" },
-        { name: "Kano", type: "city", image: "images/kano.jpg" }
-    ];
-
-    const placesContainer = document.getElementById("places");
-
-    function displayPlaces(list) {
-        if (!placesContainer) return;
-        placesContainer.innerHTML = "";
-        list.forEach(place => {
-            const card = document.createElement("div");
-            card.classList.add("card");
-            card.innerHTML = `
-                <img src="${place.image}" alt="${place.name}" loading="lazy">
-                <h3>${place.name}</h3>
-            `;
-            placesContainer.appendChild(card);
-        });
+const places = [{
+        name: "Zuma Rock",
+        category: "nature",
+        imageUrl: "images/zuma-rock.jpg",
+        location: "Abuja"
+    },
+    {
+        name: "Obudu Mountain Resort",
+        category: "nature",
+        imageUrl: "images/obudu.jpg",
+        location: "Cross River"
+    },
+    {
+        name: "Lekki Conservation Centre",
+        category: "nature",
+        imageUrl: "images/lekki.jpg",
+        location: "Lagos"
+    },
+    {
+        name: "Lagos City",
+        category: "city",
+        imageUrl: "images/lagos.jpg",
+        location: "Lagos"
+    },
+    {
+        name: "Abuja City",
+        category: "city",
+        imageUrl: "images/abuja.jpg",
+        location: "FCT"
+    },
+    {
+        name: "Kano City",
+        category: "city",
+        imageUrl: "images/kano.jpg",
+        location: "Kano"
     }
+];
 
-    window.filterPlaces = (type) => {
-        if (type === "all") displayPlaces(placesData);
-        else displayPlaces(placesData.filter(p => p.type === type));
-    };
+const container = document.getElementById("places");
 
-    displayPlaces(placesData);
+function displayPlaces(placeList) {
+    container.innerHTML = "";
 
-    // Visit Counter
-    const visitBtn = document.getElementById("visitBtn");
-    const visitMsg = document.getElementById("visitMsg");
-    if (visitBtn && visitMsg) {
-        let visits = parseInt(localStorage.getItem("visits") || 0);
-        visitMsg.textContent = `Visits: ${visits}`;
-        visitBtn.addEventListener("click", () => {
-            visits++;
-            localStorage.setItem("visits", visits);
-            visitMsg.textContent = `Visits: ${visits}`;
-        });
+    placeList.forEach(place => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+            <img src="${place.imageUrl}" alt="${place.name}" loading="lazy">
+            <h3>${place.name}</h3>
+            <p>${place.location}</p>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+function filterPlaces(category) {
+    if (category === "all") {
+        displayPlaces(places);
+    } else {
+        const filtered = places.filter(place => place.category === category);
+        displayPlaces(filtered);
     }
+}
 
-    // Dark Mode Toggle
-    const darkBtn = document.getElementById("darkMode");
-    if (darkBtn) darkBtn.addEventListener("click", () => document.body.classList.toggle("dark"));
-
-    // Contact Form Submission
-    const form = document.getElementById("contactForm");
-    if (form) {
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            document.getElementById("formMsg").textContent = "Message sent successfully!";
-            form.reset();
-        });
-    }
-
-});
+// LOAD ALL ON PAGE LOAD
+displayPlaces(places);
