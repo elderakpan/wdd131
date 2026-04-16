@@ -3,42 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>References</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Add description for better grading -->
-    <meta name="description" content="References for Discover Nigerian Life website project">
+    <title>References | Discover Nigeria</title>
+
+    <meta name="description" content="References used for Discover Nigeria project">
     <meta name="author" content="Itoro Etim Akpan">
 
     <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts/script.js"></script>
 </head>
 
 <body>
+
     <header>
         <h1>References</h1>
-        <nav aria-label="Main navigation">
+        <nav>
             <a href="index.html">Home</a>
             <a href="explore.html">Explore</a>
             <a href="contact.html">Contact</a>
-            <a href="references.html" aria-current="page">References</a>
+            <a href="references.html" class="active">References</a>
         </nav>
     </header>
 
     <main>
+
         <h2>Sources</h2>
-        <div class="references-card">
-            <p>Images from <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
-            <p>Information from <a href="https://en.wikipedia.org/wiki/Culture_of_Nigeria" target="_blank">Wikipedia</a></p>
-            <p>Personal knowledge and course materials (WDD 131)</p>
+
+        <ul>
+            <li>Wikipedia - Nigerian Culture</li>
+            <li>Google Images (for educational use)</li>
+            <li>Personal research</li>
+        </ul>
+
     </main>
 
     <footer>
-        <p>© <span id="currentyear"></span> | Itoro Etim Akpan | Nigeria</p>
+        <p>© <span id="year"></span> | Itoro Etim Akpan</p>
     </footer>
-
-    <script>
-        document.getElementById('currentyear').textContent = new Date().getFullYear();
-    </script>
 
 </body>
 

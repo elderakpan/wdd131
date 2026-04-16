@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Discover Nigeria</title>
-    <meta name="description" content="Discover Nigerian culture, traditional foods, festivals, and tourist attractions.">
+
+    <meta name="description" content="Discover Nigerian culture, foods, festivals, and attractions.">
     <meta name="author" content="Itoro Etim Akpan">
+
     <link rel="stylesheet" href="styles/styles.css">
     <script defer src="scripts/script.js"></script>
 </head>
@@ -15,8 +18,8 @@
 
     <header>
         <h1>Discover Nigeria</h1>
-        <nav aria-label="Main navigation">
-            <a href="index.html" aria-current="page">Home</a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
             <a href="explore.html">Explore</a>
             <a href="contact.html">Contact</a>
             <a href="references.html">References</a>
@@ -24,32 +27,40 @@
     </header>
 
     <section class="hero">
-        <h2>Discover Nigeria</h2>
-        <p>Experience food, culture, and amazing places</p>
+        <h2>Explore Nigeria</h2>
+        <p>Experience culture, food, and beautiful places</p>
     </section>
 
     <main>
+
+        <h3 id="testJS">JS Not Working</h3>
+
         <section>
             <h2>Popular Foods</h2>
+
             <div class="grid">
                 <div class="card">
-                    <img src="images/jollof-rice.avif" alt="Jollof Rice" loading="lazy">
+                    <img src="images/jollof-rice.avif" loading="lazy" alt="Jollof Rice">
                     <h3>Jollof Rice</h3>
                 </div>
+
                 <div class="card">
-                    <img src="images/pounded-yam.jpg" alt="Pounded Yam" loading="lazy">
+                    <img src="images/pounded-yam.jpg" loading="lazy" alt="Pounded yam with soup">
                     <h3>Pounded Yam</h3>
                 </div>
+
                 <div class="card">
-                    <img src="images/suya.jpg" alt="Suya" loading="lazy">
+                    <img src="images/suya.jpg" loading="lazy" alt="Grilled suya meat">
                     <h3>Suya</h3>
                 </div>
+
                 <div class="card">
-                    <img src="images/moi-moi.jpg" alt="Moi Moi" loading="lazy">
+                    <img src="images/moi-moi.jpg " loading="lazy" alt="Moi moi in leaf wrap ">
                     <h3>Moi Moi</h3>
                 </div>
+
                 <div class="card">
-                    <img src="images/egusi.jpg" alt="Egusi Soup" loading="lazy">
+                    <img src="images/egusi.jpg " loading="lazy" alt="Egusi soup with meat ">
                     <h3>Egusi Soup</h3>
                 </div>
             </div>
@@ -57,29 +68,17 @@
 
         <section>
             <h2>Major Festivals</h2>
-            <ul>
-                <li>Eyo Festival</li>
-                <li>Osun-Osogbo Festival</li>
-                <li>New Yam Festival</li>
-                <li>Durbar Festival</li>
-            </ul>
-        </section>
+            <ul id="festivalList"></ul>
 
-        <button id="visitBtn">Record Visit</button>
-        <p id="visitMsg" aria-live="polite"></p>
+            <button id="visitBtn">Record Visit</button>
+            <p id="visitMsg"></p>
 
-        <button id="darkMode">Toggle Dark Mode</button>
-    </main>
+            <button id="darkMode">Toggle Dark Mode</button>
 
-    <footer>
-        <p>© <span id="currentyear"></span> | Itoro Etim Akpan | Nigeria</p>
-        <p id="lastModified"></p>
-    </footer>
-
-    <script>
-        document.getElementById('currentyear').textContent = new Date().getFullYear();
-        document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
-    </script>
+            <footer>
+                <p>© <span id="year"></span> | Itoro Etim Akpan | Nigeria</p>
+                <p id="modified"></p>
+            </footer>
 
 </body>
 
